@@ -74,3 +74,4 @@ Array.prototype.unique = function () {
 };
 
 console.log(arr.unique());
+console.dir((x) => x + 1);
