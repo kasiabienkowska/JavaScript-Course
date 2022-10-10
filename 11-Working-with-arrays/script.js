@@ -123,3 +123,17 @@ console.log([...arr, ...arr2]);
 
 //JOIN
 console.log(letters.join("-"));
+
+//AT METHOD
+const arr1 = [23, 11, 64];
+console.log(arr1[0]);
+console.log(arr1.at(0));
+
+//getting last arry element - 3 methods
+console.log(arr1[arr1.length - 1]);
+console.log(arr1.slice(-1)[0]);
+console.log(arr1.at(-1));
+
+//at method works also on string
+
+console.log("jonas".at(0));
