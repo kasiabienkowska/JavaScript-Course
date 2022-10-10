@@ -75,65 +75,96 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
-let arr = ["a", "b", "c", "d", "e"];
+// let arr = ["a", "b", "c", "d", "e"];
 
 //slice
 
 //begin parameter
-console.log(arr.slice(2));
+// console.log(arr.slice(2));
 
 //begin and end parameter
 
-console.log(arr.slice(2, 4));
+// console.log(arr.slice(2, 4));
 
 //negative begin parameter (last (two) parameters)
 
-console.log(arr.slice(-2));
-console.log(arr.slice(-1));
+// console.log(arr.slice(-2));
+// console.log(arr.slice(-1));
 
-console.log(arr.slice(1, -1));
+// console.log(arr.slice(1, -1));
 
 //we can use slice to create hallow copy of the array
 
-console.log(arr.slice());
+// console.log(arr.slice());
 
 //SPLICE
 
 // console.log(arr.splice(2));
 
-arr.splice(-1);
-console.log(arr);
-arr.splice(1, 2);
+// arr.splice(-1);
+// console.log(arr);
+// arr.splice(1, 2);
 
-console.log(arr);
+// console.log(arr);
 
 //REVERSE
 
-const arr2 = ["j", "i", "h", "g", "f"];
+// const arr2 = ["j", "i", "h", "g", "f"];
 
-arr2.reverse();
+// arr2.reverse();
 
-console.log(arr2);
+// console.log(arr2);
 
 //CONCAT
-const letters = arr.concat(arr2);
-console.log(letters);
+// const letters = arr.concat(arr2);
+// console.log(letters);
 
-console.log([...arr, ...arr2]);
+// console.log([...arr, ...arr2]);
 
 //JOIN
-console.log(letters.join("-"));
+// console.log(letters.join("-"));
 
 //AT METHOD
-const arr1 = [23, 11, 64];
-console.log(arr1[0]);
-console.log(arr1.at(0));
+// const arr1 = [23, 11, 64];
+// console.log(arr1[0]);
+// console.log(arr1.at(0));
 
 //getting last arry element - 3 methods
-console.log(arr1[arr1.length - 1]);
-console.log(arr1.slice(-1)[0]);
-console.log(arr1.at(-1));
+// console.log(arr1[arr1.length - 1]);
+// console.log(arr1.slice(-1)[0]);
+// console.log(arr1.at(-1));
 
 //at method works also on string
 
-console.log("jonas".at(0));
+// console.log("jonas".at(0));
+
+for (const movement of movements) {
+	if (movement > 0) {
+		console.log("You deposited ${movement}");
+	} else console.log("You withdrew ${Math.abs(movement)");
+}
+
+console.log("-------forEach--------");
+movements.forEach(function (movement) {
+	if (movement > 0) {
+		console.log("You deposited ${movement}");
+	} else console.log("You withdrew ${Math.abs(movement)");
+});
+
+//counter variable
+
+//forOf
+
+for (const [i, movement] of movements.entries()) {
+	if (movement > 0) {
+		console.log(`Movement ${i + 1}: You deposited ${movement}`);
+	} else console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
+}
+
+console.log("----forEach-------");
+//forEach
+movements.forEach(function (mov, i, arr) {
+	if (mov > 0) {
+		console.log(`Movement ${i + 1}: You deposited ${mov}`);
+	} else console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+});
